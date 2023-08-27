@@ -1,0 +1,81 @@
+.add-contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .add-contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .add-contact-form input[type="text"],
+  .add-contact-form input[type="email"],
+  .add-contact-form input[type="tel"],
+  .add-contact-form input[type="date"] {
+    width: calc(50% - 5px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-contact-form input[type="file"] {
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .add-contact-form img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+  }
+  
+  .add-contact-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+.choose-file-btn {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .choose-file-btn:hover {
+    background-color: #0056b3;
+  }
+
+.warning-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

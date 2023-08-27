@@ -1,0 +1,52 @@
+<h2>Add New Contact</h2>
+<div class="add-contact-form">
+  <form (ngSubmit)="addContact()" #contactForm="ngForm">
+    <label>
+      First Name: <input [(ngModel)]="newContact.first_name" name="first_name" required />
+    </label>
+    <div *ngIf="contactForm.controls['first_name'].invalid" class="warning-text">
+      First name is required.
+    </div>
+    <br>
+
+    <label>
+      Last Name: <input [(ngModel)]="newContact.last_name" name="last_name" required />
+    </label>
+    <div *ngIf="contactForm.controls['last_name'].invalid" class="warning-text">
+      Last name is required.
+    </div>
+    <br>
+
+    <label>
+      Email: <input [(ngModel)]="newContact.email" name="email" type="email" required />
+    </label>
+    <div *ngIf="contactForm.controls['email'].invalid" class="warning-text">
+      Valid email is required.
+    </div>
+    <br>
+
+    <label>
+      Phone: <input [(ngModel)]="newContact.phone" name="phone" required />
+    </label>
+    <div *ngIf="contactForm.controls['phone'].invalid" class="warning-text">
+      Phone is required.
+    </div>
+    <br>
+    <label>
+      Mobile: <input [(ngModel)]="newContact.mobile" name="mobile" />
+    </label><br>
+    <label>
+      Date of Birth: <input type="date" [(ngModel)]="newContact.dob" name="dob" />
+    </label><br>
+    <div class="image-drop-container" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+      <p>Drag and drop an image here or click to choose a file</p>
+      <input type="file" (change)="onImageSelected($event)" accept="image/*" class="choose-file-btn">
+      <img *ngIf="imagePreview" [src]="imagePreview" alt="Image Preview"><br>
+    </div>
+    <img *ngIf="imagePreview" [src]="imagePreview" alt="Image Preview"><br>
+    <div *ngIf="contactForm.invalid" class="warning-text">
+      Please fill out all required fields correctly.
+    </div>
+    <button type="submit" [disabled]="!contactForm.valid">Add Contact</button>
+  </form>
+</div>

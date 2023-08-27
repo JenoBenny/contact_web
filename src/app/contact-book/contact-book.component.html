@@ -1,0 +1,20 @@
+
+<!-- Display list of contacts with details -->
+<h2>Contact Book</h2>
+
+<table class="contact-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>{{ contact.first_name }} {{ contact.last_name }}</td>
+      <td>{{ contact.mobile }}</td>
+      <td>{{ contact.phone }}</td>
+    </tr>
+  </tbody>
+</table>

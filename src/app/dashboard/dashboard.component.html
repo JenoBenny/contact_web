@@ -1,0 +1,15 @@
+<article>
+<div *ngFor="let contact of contacts" class="contact-card">
+  <!-- Display contact details -->
+  <img *ngIf="contact.image" [src]="contact.image" alt="Contact Image">
+  <div class="contact-details">
+    <p><strong>Name:</strong> {{ contact.first_name }} {{ contact.last_name }}</p>
+    <p><strong>Date of Birth:</strong> {{ contact.dob }}</p>
+    <p><strong>Phone:</strong> {{ contact.phone }}</p>
+    <p><strong>Mobile:</strong> {{ contact.mobile }}</p>
+  </div>
+  <a [routerLink]="['/contact', contact.first_name + ' ' + contact.last_name]">
+    Details
+  </a>
+</div>
+</article>
